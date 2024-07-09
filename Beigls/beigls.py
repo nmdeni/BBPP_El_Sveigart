@@ -22,4 +22,11 @@ Try to guess what it is. Here are some clues:
 For example, if the secret number was 248 and your guess was 843, the
 clues would be Fermi Pico.'''.format(NUM_DIGITS))
 
+    while True: # Основной цикл игры.
+        # Переменная, в которой хранится секретное число, которое должен угадать игрок
+        secretNum = getSecretNum()
+        print('I have thought up a number')
+        print(' You have {} guesses to get it.'.format(MAX_GUESSES))
+
+
 main()
