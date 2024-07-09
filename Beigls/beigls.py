@@ -11,6 +11,15 @@ NUM_DIGITS = 3 # (!) Попробуйте задать эту константу
 MAX_GUESSES = 10 # (!) Попробуйте задать эту константу равной 1 или 100
 
 def main():
-    print('''PASS''')
+    print('''Bagels, a deduction logic game.
+By Al Sweigart al@inventwithpython.com
+I am thinking of a {}-digit number with mo re[eated digits.
+Try to guess what it is. Here are some clues:
+    Pico    One digit is correct but in the wrong position.
+    Fermi   One digit is correct and in the right position
+    Bagels  No digit is correct
+    
+For example, if the secret number was 248 and your guess was 843, the
+clues would be Fermi Pico.'''.format(NUM_DIGITS))
 
 main()
