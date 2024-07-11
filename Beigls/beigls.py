@@ -28,5 +28,31 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))
         print('I have thought up a number')
         print(' You have {} guesses to get it.'.format(MAX_GUESSES))
 
+        numGuesses = 1
+        while numGuesses <= MAX_GUESSES:
+            guess = ''
+            # Продолжаем итерацию до получение правильне догадки:
+            while len(guess) != NUM_DIGITS or not guess.isdecimal():
+                print('Guess #{}: '.format(numGuesses))
+                guess = input('> ')
 
+            clues = getClues(guess, secretNum)
+            print(clues)
+            numGuesses += 1
+
+            if guess == secretNum:
+                break # правильно, выходим из игры
+            if numGuesses > MAX_GUESSES:
+                print('You ran out of guesses.')
+                print('The answer was {}'.format(secretNum))
+
+        # Спрашиваем игрока, хочет ли он сыграть еще раз
+        print('Do you want to play again? (yes or no)')
+        if not input('> ').lower().startswith('y'):
+            break
+    print('Thanks for playing!')
+def getSecretNum():
+    pass
+def getClues(a,b):
+    pass
 main()
