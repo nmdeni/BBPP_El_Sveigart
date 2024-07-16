@@ -52,7 +52,16 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))
             break
     print('Thanks for playing!')
 def getSecretNum():
-    pass
+    '''Возвращает строку из NUM_DIGITS уникальных случайных цифр.'''
+    numbers = list('0123456789') # создает список цифр от 0 до 9
+    random.shuffle(numbers) # перетасовывает их случайноым образом
+
+    # Берем первые NUM_DIGITS цифр списка для нашего секретного числа:
+    secretNum = ''
+    for i in range(NUM_DIGITS):
+        secretNum += str(numbers[i])
+
+    return secretNum
 def getClues(a,b):
     pass
 main()
