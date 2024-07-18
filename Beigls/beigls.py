@@ -62,6 +62,30 @@ def getSecretNum():
         secretNum += str(numbers[i])
 
     return secretNum
-def getClues(a,b):
-    pass
-main()
+
+def getClues(guess, secretNum):
+    '''Возвращает строку с подсказками pico, fermi и bagels
+    для полученной на входе пары из догадки и секретного числа'''
+    if guess == secretNum:
+        return 'You got it!'
+
+    clues = []
+
+    for i in range(len(guess)):
+        if guess[i] == secretNum[i]:
+            # Правильный цифра на правиьлном месте
+            clues.append('Fermi')
+        elif guess[i] in secretNum:
+            # Правильная цифра на не правильном месте
+            clues.append('Pico')
+    if len(clues) == 0:
+        return 'Bagels' # Правильных цыфр нет вообще
+    else:
+        # сортируем подсказки в алфавитном порядке чтобы их исходный
+        # порядок ничего не выдавал
+        clues.sort()
+        # склеиваем список подсказок в одно строковое значение
+        return ' '.join(clues)
+
+if __name__ == '__main__':
+    main()
