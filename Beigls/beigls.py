@@ -7,7 +7,7 @@ Computer Games with Python на nostarch.com/inventwithpython
 
 import random
 
-NUM_DIGITS = 3 # (!) Попробуйте задать эту константу равной 1 или 10
+NUM_DIGITS = 4 # (!) Попробуйте задать эту константу равной 1 или 10
 MAX_GUESSES = 10 # (!) Попробуйте задать эту константу равной 1 или 100
 
 def main():
@@ -53,7 +53,8 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))
     print('Thanks for playing!')
 def getSecretNum():
     '''Возвращает строку из NUM_DIGITS уникальных случайных цифр.'''
-    numbers = list('0123456789') # создает список цифр от 0 до 9
+    # numbers = list('0123456789') # создает список цифр от 0 до 9
+    numbers = list('0123456789abcdefg') # создает список цифр от 0 до 9
     random.shuffle(numbers) # перетасовывает их случайноым образом
 
     # Берем первые NUM_DIGITS цифр списка для нашего секретного числа:
