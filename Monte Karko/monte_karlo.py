@@ -4,3 +4,4 @@ al@inventwithpython.com Изучаем неожиданные вероятнос
 https://ru.wikipedia.org/wiki/Парадокс_дней_рождения
 Код размещен на https://nostarch.com/big-book-small-python-projects
 Теги: короткая, математическая, имитационное моделирование"""
+import datetime, random
