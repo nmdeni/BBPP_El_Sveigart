@@ -19,3 +19,17 @@ def getBirthdays(numberOfBirdays):
         birtdays.append(birtday)
 
     return birtdays
+
+def getMathc(birthdays):
+    """Возвращаем объект даты дня рождения, встречающегося
+    несколько раз в списке дней рождения. """
+    if len(birthdays) == len(set(birthdays)):
+        return None # Все дни рождения различны, возвращаем None.
+
+    # Сравниваем все дни рождения с друго другом попарно:
+    for a, birthdayB in enumerate(birthdays):
+        for b, birthdayA in enumerate(birthdays[a+1:]):
+            if birthdayA == birthdayB:
+                return birthdayA # возвращаем найденное соответствие
+
+#
