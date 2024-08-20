@@ -41,3 +41,14 @@ This program does a Monte Carlo simulation (that is, repeated random
 simulations) to explore this comcept.
 
 (it's not actually a paradox, it's just a surprising result.)""")
+
+# Создаем кортеж названий месяцев по порядку:
+MONTHS = ('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')
+
+while True: # Запрашиваем, пока пользователь не введет допустимое значение.
+    print('How many bithdays shall I generate? (Max 100)')
+    response = input('> ')
+    if response.isdecimal() and (0 < int(response) <= 100):
+        numBDays = int(response)
+        break # Пользователь ввел допустимое значение
+print()
